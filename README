@@ -1,0 +1,3 @@
+This is a fantasy football webapp that Dillen and I wrote last weekend. The backend is a mess but we're going to fix it up and hopefully launch it
+
+Note that you need to make your own personal_settings.py and the bash script has my username, password defaults in it
