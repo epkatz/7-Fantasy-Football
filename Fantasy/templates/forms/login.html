@@ -1,0 +1,53 @@
+<fieldset id="login-div">
+	<legend>
+		Login
+	</legend>
+	<form action="/login" method="post">
+		<p>
+			<label for="name"> Username: </label>
+			<input name="username" id="username" value="" type="text" />
+		</p>
+		<p>
+			<label for="password"> Password: </label>
+			<input name="password" id="password" value="" type="password" />
+		</p>
+		<p>
+			<input name="send" style="margin-left: 150px;" class="formbutton" value="Login" type="submit" />
+		</p>
+	</form>
+</fieldset>
+<fieldset id="register-div">
+	<legend>
+		Create a new user
+	</legend>
+	<form action="/register" method="post">
+		<p>
+			<label for="name"> Username: </label>
+			<input name="username" id="username" value="" type="text" />
+		</p>
+		<p>
+			<label for="email"> E-Mail: </label>
+			<input name="email" id="email" value="" type="text" />
+		</p>
+		<p>
+			<label for="team_name"> Team Name: </label>
+			<input name="team_name" id="team_name" value="" type="text" />
+		</p>
+		<p>
+			<label for="password1"> Password: </label>
+			<input name="password1" id="password1" value="" type="password" />
+		</p>
+		<p>
+			<label for="password2"> Confirm Password: </label>
+			<input name="password2" id="password2" value="" type="password" />
+		</p>
+		<p>
+			<input name="send" style="margin-left: 150px;" class="formbutton" value="Register" type="submit" />
+		</p>
+	</form>
+</fieldset>
+{% if error_message %}
+<p class="error">{{error_message}}</p>
+{% endif %}
+<h4 id="register-show"> Create a new user </h4>
+<h4 id="login-show"> Show Login </h4>

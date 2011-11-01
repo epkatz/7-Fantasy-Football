@@ -1,0 +1,14 @@
+<div class="sidebar">
+	<ul>
+		<li>
+			<h4><span>Notifications</span></h4>
+			<ul class="blocklist">
+				{% for n in notifications %}
+				<li>
+					<p>{{ n }}</p>
+				</li>
+				{% endfor %}
+			</ul>
+		</li>
+	</ul>
+</div>

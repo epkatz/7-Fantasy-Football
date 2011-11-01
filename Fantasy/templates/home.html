@@ -1,0 +1,13 @@
+{% if perms.football.add_week %}
+<a href="/add_week"><h2>Commissioner Activities</h2></a>
+{% endif %}
+</br>
+</br>
+{% if messages %}
+<h2>Notifications</h2>
+    {% for message in messages %}
+    <h4>{{ message }}</h4>
+    {% endfor %}
+{% else %}
+<h2>No Notifications</h2>
+{% endif %}

@@ -1,0 +1,400 @@
+body {
+  background-color: #000000;
+	/*background: #000 url('images/bodybg.jpg') repeat-x scroll top left;*/
+	margin:0;
+	padding:0;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+#error {
+	color: red;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	padding-bottom: 30px;
+	text-align:center;
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/** element defaults **/
+table {
+	width: 100%;
+	text-align: left;
+}
+
+th, td {
+	padding: 10px 10px;
+}
+
+th {
+	color: #fff;
+	background: #554667 url(images/navbg.jpg) repeat-x scroll -15px 0;
+}
+
+td {
+	background: #111;
+	border-bottom: 1px solid #222;
+	color: #999;
+}
+
+code, blockquote {
+	display: block;
+	border-left: 5px solid #ddd;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+code {
+	background-color: #ddd;
+	border: none;
+}
+blockquote {
+	border-left: 5px solid #333;
+}
+
+blockquote p {
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin: 0;
+	color: #909090;
+	height: 1%;
+}
+
+p {
+	line-height: 1.9em;
+	margin-bottom: 20px;
+}
+
+p.error {
+	color: red;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	letter-spacing: -0.5px;
+	padding: 0 0 5px;
+	margin: 0;
+	font-weight: normal;
+}
+
+a {
+	color: #5E4E73;
+}
+
+a:hover {
+	color: #A394B8;
+}
+
+a:focus {
+	outline: none;
+}
+
+fieldset {
+	display: block;
+	border: none;
+	border-top: 1px solid #333;
+}
+
+fieldset legend {
+	font-weight: bold;
+	font-size: 13px;
+	padding-right: 10px;
+	color: #666;
+}
+
+fieldset form {
+	padding-top: 15px;
+}
+
+fieldset p label {
+	float: left;
+	width: 150px;
+}
+
+form input, form select, form textarea {
+	padding: 5px;
+	color: #333333;
+	border: 1px solid #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+form input.formbutton {
+	border: none;
+	background: #FFFFFF url(images/bodybg.jpg) repeat-x scroll 0 -160px;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+	letter-spacing: 1px;
+	width: auto;
+	overflow: visible;
+}
+
+form.searchform p {
+	margin: 5px 0;
+}
+
+form.searchform input.s {
+	border: 1px solid #000;
+}
+
+span.required {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #ff0000;
+}
+
+h1 {
+	color: #A394B8;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 35px;
+}
+
+h2 {
+	color: #65537D;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	letter-spacing: -0.5px;
+	padding: 0 0 5px;
+	margin: 0;
+	font-weight: normal;
+}
+
+h3 {
+	color: #A394B8;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+h4 {
+	padding-bottom: 10px;
+	font-size: 15px;
+	color: #666;
+}
+
+h5 {
+	padding-bottom: 10px;
+	font-size: 13px;
+	color: #666;
+}
+
+ul, ol {
+	margin: 0 0 35px 35px;
+}
+
+li {
+	padding-bottom: 5px;
+}
+
+li ol, li ul {
+	font-size: 1.0em;
+	margin-bottom: 0;
+	padding-top: 5px;
+}
+
+
+#container {
+	width: 970px;
+	margin:0 auto;
+	padding: 0;
+	/*background: transparent url('images/content-bg.jpg') no-repeat scroll 0 160px;*/
+}
+
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 110px;
+}
+
+#header h1  {
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+#header h1 a {
+	font-family: "Impact", Arial, Helvetica, sans-serif;
+	color: #eee;
+	font-size: 45px;
+	font-weight: normal;
+	text-decoration: none;
+	letter-spacing: -1px;
+	float: left;
+	text-transform:uppercase;
+}
+
+#header h2 {
+	color: #ffffff;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	margin-left: 12px;
+	margin-top: 28px;
+	padding-left: 4px;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}
+
+#nav {
+	background: #fff url('images/navbg.jpg') repeat-x scroll top left;
+	height: 50px;
+	width: 970px;
+}
+
+#nav ul {
+	list-style: none;
+	padding: 0 5px;
+	margin: 0;
+	height: 50px;
+}
+
+#nav ul li {
+	float: left;
+	display: block;
+	padding:0;
+}
+
+#nav ul li.float_right {
+	float: right;
+	display: block;
+	padding:0;
+}
+
+#nav ul li a {
+	color: #B6A7C3;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 19px 15px 16px;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav ul li a:hover {
+	text-decoration: underline;
+}
+
+#nav ul li a.selected {
+	color: #fff;
+}
+
+#nav ul li a.selected:hover {
+	text-decoration: none;
+}
+
+#body {
+	background: transparent none repeat-y scroll 0 0;
+	margin:25px auto 0;
+	padding: 15px;
+	width: 930px;
+	height:auto;
+  min-height: 500px;
+}
+
+#content {
+	float: left;
+	width: 750px;
+	margin: 0;
+}
+
+.sidebar {
+	width: 150px;
+	padding: 0;
+	float: right;
+}
+
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar ul li {
+	margin-bottom: 20px;
+	line-height: 1.9em;
+}
+
+.sidebar li ul {
+	border-top: 1px solid #6F5B86;
+	background: #111;
+	border-bottom: 1px solid #222;
+}
+
+.sidebar li ul li {
+	display: block;
+	border-top: none;
+	padding: 6px 7px;
+	margin: 0;
+	line-height: 1.5em;
+	color: #666;
+}
+
+.sidebar li ul li a {
+	font-weight: normal;
+	color: #666;
+}
+
+.sidebar li ul.blocklist li {
+	padding: 0;
+	display: inline;
+}
+
+.sidebar li ul.blocklist li a {
+	display: block;
+	padding: 7px 8px;
+	text-decoration: none;
+}
+
+.sidebar li ul.blocklist li a:hover {
+	background-color: #202020;
+	color: #9f9f9f;
+}
+
+.sidebar li ul li a:hover {
+	color: #3C73AA;
+}
+
+.sidebar h4 {
+	background: #554667 url(images/navbg.jpg) repeat-x scroll -15px 0;
+	color: #FFFFFF;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1em;
+	margin: 0;
+	padding: 12px;
+	text-transform: uppercase;
+}
+
+.clear {
+	clear: both;
+}
+
+#footer {
+	width: 960px;
+	margin:0 auto;
+}
+
+.footer-content {
+	background: #000 url('images/footer.jpg') repeat-x scroll top left;
+	padding: 20px 5px;
+}
+
+#footer p {
+	text-align: center;
+	color: #666;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#footer p a {
+	color: #999;
+	font-weight: bold;
+}

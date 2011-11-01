@@ -1,0 +1,59 @@
+{% if error_message %}
+<span id="error">{{error_message}}</span>
+{% endif %}
+
+<h3>{{team1.team_name}}</h3>
+<form action="/make_trade" method="POST">	
+<table cellspacing="0">
+	<tr>
+		<th>Name</th>
+		<th>Position</th>
+		<th>Salary</th>
+		<th>Total Points</th>
+		<th>Average PPW</th>
+		<th>Check to Trade</th>
+	</tr>
+	{% for player in players1 %}
+	<tr>
+		<td>{{ player.full_name }}</td>
+		<td>{{ player.position }}</td>
+		<td>{{ player.salary }}</td>
+		<td>{{ player.total_pts }}</td>
+		<td>{{ player.average_pts }}</td>
+		<td><input type="checkbox" name="players_team1" value="{{ player.pk }}"><td>
+	</tr>
+	{% endfor %}
+</table>
+<br/>
+<br/>
+<br/>
+<h3>{{team2.team_name}}</h3>
+<table cellspacing="0">
+	<tr>
+		<th>Name</th>
+		<th>Position</th>
+		<th>Salary</th>
+		<th>Total Points</th>
+		<th>Average PPW</th>
+		<th>Check to Trade</th>
+	</tr>
+	{% for player in players2 %}
+	<tr>
+		<td>{{ player.full_name }}</td>
+		<td>{{ player.position }}</td>
+		<td>{{ player.salary }}</td>
+		<td>{{ player.total_pts }}</td>
+		<td>{{ player.average_pts }}</td>
+		<td><input type="checkbox" name="players_team2" value="{{ player.pk }}"><td>
+	</tr>
+	{% endfor %}
+</table>
+
+<br />
+<br />
+
+<input name="team1_pk" value="{{team1.pk}}" type="hidden" />
+<input name="team2_pk" value="{{team2.pk}}" type="hidden" />
+
+<input name="send" value="Make Trade" type="submit" />
+</form>

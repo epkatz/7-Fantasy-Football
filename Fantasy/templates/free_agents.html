@@ -1,0 +1,42 @@
+{% if error_message %}
+<span id="error">{{error_message}}</span>
+{% endif %}
+
+<h3>Free Agents</h3>
+<table cellspacing="0">
+	<tr>
+		<th>Name</th>
+		<th>Position</th>
+		<th>Salary</th>
+		<th>Total Points</th>
+		<th>Average PPW</th>
+		<th>Action</th>
+	</tr>
+	{% for player in players.object_list %}
+	<tr>
+		<td>{{ player.full_name }}</td>
+		<td>{{ player.position }}</td>
+		<td>{{ player.salary }}</td>
+		<td>{{ player.total_pts }}</td>
+		<td>{{ player.average_pts }}</td>
+		<td>
+		<form action="/add_from_free_agent" method="post">
+			<input name="player_pk" id="player_pk" value="{{ player.pk }}" type="hidden" />
+			<input name="send" value="Add to Team" type="submit" />
+		</form>
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+
+<h4>
+{% if players.has_previous %}
+    <a href="?page={{ players.previous_page_number }}">Previous</a>
+{% endif %}
+
+Page {{ players.number }} of {{ players.paginator.num_pages }}
+
+{% if players.has_next %}
+    <a href="?page={{ players.next_page_number }}">Next</a>
+{% endif %}
+</h4>

@@ -1,0 +1,71 @@
+{% if error_message %} <span id="error">{{error_message}}</span>
+{% endif %} <h4>Remaining Budget {{team.budget}} Credits</h4>
+<h3>Starters</h3>
+<table cellspacing="0">
+	<tr>
+		<th>Name</th>
+		<th>Position</th>
+		<th>Salary</th>
+		<th>Total Points</th>
+		<th>Average PPW</th>
+		<th>Move</th>
+		<th>Drop</th>
+	</tr>
+	{% for player in players %}
+	{% if not player.benched %}
+	<tr>
+		<td>{{ player.full_name }}</td>
+		<td>{{ player.position }}</td>
+		<td>{{ player.salary }}</td>
+		<td>{{ player.total_pts }}</td>
+		<td>{{ player.average_pts }}</td>
+		<td>
+		<form action="/bench_player" method="post">
+			<input name="player_pk" id="player_pk" value="{{ player.pk }}" type="hidden" />
+			<input name="send" value="Bench" type="submit" />
+		</form></td>
+		<td>
+		<form action="/drop_player" method="post">
+			<input name="player_pk" id="player_pk" value="{{ player.pk }}" type="hidden" />
+			<input name="send" value="Drop Player" type="submit" />
+		</form></td>
+	</tr>
+	{% endif %}
+	{% endfor %}
+</table>
+</br>
+</br>
+</br> <h3>Bench</h3>
+<table cellspacing="0">
+	<tr>
+		<th>Name</th>
+		<th>Position</th>
+		<th>Salary</th>
+		<th>Total Points</th>
+		<th>Average PPW</th>
+		<th>Move</th>
+		<th>Drop</th>
+	</tr>
+	{% for player in players %}
+	{% if player.benched %}
+	<tr>
+		<td>{{ player.full_name }}</td>
+		<td>{{ player.position }}</td>
+		<td>{{ player.salary }}</td>
+		<td>{{ player.total_pts }}</td>
+		<td>{{ player.average_pts }}</td>
+		<td>
+		<form action="/start_player" method="post">
+			<input name="player_pk" id="player_pk" value="{{ player.pk }}" type="hidden" />
+			<input name="player_position" id="player_position" value="{{ player.position }}" type="hidden" />
+			<input name="send" value="Move to {{ player.position }}" type="submit" />
+		</form></td>
+		<td>
+		<form action="/drop_player" method="post">
+			<input name="player_pk" id="player_pk" value="{{ player.pk }}" type="hidden" />
+			<input name="send" value="Drop Player" type="submit" />
+		</form></td>
+	</tr>
+	{% endif %}
+	{% endfor %}
+</table>

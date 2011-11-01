@@ -1,0 +1,15 @@
+<h3>Current Standings {{ week }}</h3>
+<table cellspacing="0">
+	<tr>
+		<th>Team Name</th>
+		<th>Ranking</th>
+		<th>Score</th>
+	</tr>
+	{% for team in teams %}
+	<tr>
+		<td>{{ team.team_name }}</td>
+		<td>{{ team.current_rank }}</td>
+		<td>{{ team.total_pts }}</td>
+	</tr>
+	{% endfor %}
+</table>

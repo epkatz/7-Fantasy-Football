@@ -1,0 +1,12 @@
+{% include "fragments/header.html" %}
+
+<div id="content">
+  
+  {% include template_name %}
+  
+</div>
+
+{% if notifications %}
+{% include "fragments/sidebar.html" %}
+{%  endif %}
+{% include "fragments/footer.html" %}

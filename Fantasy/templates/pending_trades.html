@@ -1,0 +1,24 @@
+
+{% if trades %}
+
+<h2>Pending Trades</h2>
+<br/>
+
+{% for trade in trades %}
+
+<h3>Trade {{trade|first}}</h3>
+
+<h4>{{trade|cut:"'"|slice:"5:-2"}}</h4>
+<form action="/accept_trade" method="post">
+	<input name="tid" id="tid" value="{{trade|first}}" type="hidden" />
+	<input name="send" value="Accept Trade" type="submit" />
+</form>
+<br />
+<br />
+{% endfor %}
+
+{% else %}
+
+<h2>No Pending Trades</h2>
+
+{% endif %}

@@ -1,0 +1,26 @@
+<h3>Teams to Trade With</h3>
+<table cellspacing="0">
+	<tr>
+		<th>Team Name</th>
+		<th>Ranking</th>
+		<th>Score</th>
+		<th>Budget</th>
+		<th>Trade</th>
+	</tr>
+	{% for team in teams %}
+	<tr>
+		<td>{{ team.team_name }}</td>
+		<td>{{ team.current_rank }}</td>
+		<td>{{ team.total_pts }}</td>
+		<td>{{ team.budget }}</td>
+		<td>
+			<form action="/trade_with" method="post">
+			<input name="team_pk" id="team_pk" value="{{ team.pk }}" type="hidden" />
+			<input name="send" value="Trade With" type="submit" />
+		</form>
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+
+
